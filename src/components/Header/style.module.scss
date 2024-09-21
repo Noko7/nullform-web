@@ -1,13 +1,13 @@
 .header{
     position: absolute;
     display: flex;
-    z-index: 1;
+    z-index: 100;
     top: 0;
-    color: white;
+    color: black;
     padding: 35px;
     justify-content: space-between;
     width: 100%;
-    font-weight: 300;
+    font-weight: 500;
     box-sizing: border-box;
     align-items: center;
     
@@ -61,11 +61,13 @@
         align-items: center;
 
         .el{
+            font: url('/fonts/Aeonik.ttf');
             display: flex;
             flex-direction: column;
             position: relative;
             z-index: 1;
             padding: 15px;
+            
             cursor: pointer;
             &:hover{
                 .indicator{

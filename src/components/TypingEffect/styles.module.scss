@@ -1,0 +1,11 @@
+.typingEffect {
+    font-size: 3rem; // Adjust as needed
+    font-weight: bold; // Adjust as needed
+    display: inline-block; // To ensure the blinking effect aligns correctly
+  }
+  
+  .blink {
+    opacity: 0; // Hidden when blinking
+    transition: opacity 0.5s; // Smooth transition for blinking
+  }
+  

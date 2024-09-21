@@ -1,0 +1,36 @@
+.donutContainer {
+    height: 100vh;
+    background-color: rgba(217, 217, 217, 1);
+}
+
+
+.heroContainer {
+    height: 100vh;
+    // background-color: orange;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+    width: 100vw;
+    background-image: url('../../public/BgImages/WhiteNoise.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+}
+
+
+
+.heroContainer h1 {
+    font-size: 200px;
+    position: absolute;
+    font-family: 'Pixel';
+    letter-spacing: 20px;
+
+}
+
+
+
+.statueContainer {
+    position: relative;
+    top: 10rem;
+}

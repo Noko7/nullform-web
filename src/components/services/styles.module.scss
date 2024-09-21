@@ -1,0 +1,25 @@
+.container{
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+     max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+z-index: 1000;
+
+.contentLabel {
+    // position: absolute;
+    top: -10rem;;
+    text-transform: uppercase;
+    font-weight: light;
+    margin-left: 30px;
+    color: #9A9080;
+    font-size: 24px;
+    // z-index: 10000;
+}
+}
+
+
+
+
+

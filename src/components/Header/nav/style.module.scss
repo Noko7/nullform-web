@@ -1,7 +1,12 @@
 .menu{
     height: 100vh;
-    background-color: rgb(41, 41, 41);
+    // background-color: rgb(41, 41, 41);
+    background-image: url('../../../../public/BgImages/Sidenavbg.png');
+    
+    background-repeat: no-repeat;
     position: fixed;
+    background-position: top right;
+    background-size: cover;
     right: 0;
     top: 0;
     color: white;
@@ -32,7 +37,8 @@
             a{
                 text-decoration: none;
                 color: white;
-                font-weight: 300;
+                font-weight: bold;
+                text-transform: uppercase;
             }
             
         }

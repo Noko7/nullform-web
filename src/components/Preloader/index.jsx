@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
 
-const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
+const words = ["Web Design", "Web Development", "App Development", "Graphic Design", "Social Media Design", "Logo Design", "UI/UX",'BLACKGRID.']
 
 export default function Index() {
     const [index, setIndex] = useState(0);
@@ -17,7 +17,7 @@ export default function Index() {
     useEffect( () => {
         if(index == words.length - 1) return;
         setTimeout( () => {
-            setIndex(index + 1)
+            setIndex(index + 1) 
         }, index == 0 ? 1000 : 150)
     }, [index])
 

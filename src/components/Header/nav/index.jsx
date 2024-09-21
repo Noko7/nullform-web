@@ -42,11 +42,12 @@ export default function index() {
        <div className={styles.body}>
             <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
                     <div className={styles.header}>
-                        <p>Navigation</p>
+                        <p>nullform@nullform.com</p>
                     </div>
                     {
                       navItems.map( (data, index) => {
                         return <Link 
+                        style={{display: 'none'}}
                         key={index} 
                         data={{...data, index}} 
                         isActive={selectedIndicator == data.href} 

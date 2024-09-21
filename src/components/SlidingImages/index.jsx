@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
 import Image from 'next/image';
+import TextSelect from '../TextSelect/Canvas'
 
 const slider1 = [
     {
@@ -82,10 +83,15 @@ export default function index() {
                             </div>
                         })
                     }
+            
                 </motion.div>
+         
+            
+            
                 <motion.div style={{height}} className={styles.circleContainer}>
                     <div className={styles.circle}></div>
                 </motion.div>
+            
         </div>
     )
 }
