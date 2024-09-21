@@ -3,7 +3,12 @@ body{
     margin: 0px;
     overflow: hidden; /* Hide scrollbars */
     cursor: wait;
-    background-image: url('/assets/BgImages/WhiteNoise.jpg');
+    background-image: url('/BgImages/WhiteNoise.jpg');
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 
@@ -16,5 +21,16 @@ body{
 
   @font-face {
     font-family: 'Aeonik';
-    src: url('/fonts/Aeonik.ttf') format('truetype')
+    src: url('/fonts/Aeonik.otf') 
+  }
+
+
+  @font-face{
+    font-family: 'General';
+    src: url('/fonts/General.otf');
+  }
+
+  @font-face {
+    font-family: "naughty";
+    src: url('/fonts/Naughty.otf');
   }

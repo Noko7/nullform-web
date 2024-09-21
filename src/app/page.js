@@ -69,8 +69,10 @@ export default function Home() {
         
         </div>
 
+<div className={styles.aboutContainer}>
         <Description />
         <Projects />
+        </div>
         <SlidingImages />
         <div className={styles.sphereContainer}>
           <Services />

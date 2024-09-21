@@ -12,6 +12,7 @@
    align-items: center;
     width: 100vw;
     background-image: url('../../public/BgImages/WhiteNoise.jpg');
+
    background-size: cover;
    background-repeat: no-repeat;
    background-attachment: fixed;
@@ -33,4 +34,16 @@
 .statueContainer {
     position: relative;
     top: 10rem;
+}
+
+
+.aboutContainer {
+ background-image: url('../../public/BgImages/WhiteNoise.jpg');
+ margin-top: 0;
+ padding-top: 0;
+
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center;
 }

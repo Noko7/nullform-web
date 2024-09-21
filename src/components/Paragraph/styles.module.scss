@@ -1,21 +1,28 @@
 .paragraph{
     display: flex;
-  font-size: 23px;
-    line-height: 1;
+  font-size: 90px !important;
+    line-height: 86px !important;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     max-width: 2400px;
-    font-weight: bold;
+    font-weight: 500;
     // color: #b7ab98;
-    color: white;
+    // color: black;
+    text-transform: uppercase;
     flex-wrap: wrap;
-    .word{
+    font-family: Aeonik;
+    //  font-family: 'Aeonik';
+    //  font-family: pixel;
+     font-weight: bold;
+     letter-spacing: 2;
+    
+     .word{
       position: relative; 
       margin-right: 12px;
       margin-top: 12px;
       .shadow{
         position: absolute;
-        opacity: 20%;
+        opacity: 0%;
       }
     } 
 
@@ -34,21 +41,15 @@
 }
 
   }
-
-  
-
-
-
-
-
-
-
+ 
   .word {
     display: flex;
+    
   }
   
   .highlighted {
-    color: #EB4E39;
+    color: rgba(111, 71, 197, 1);
+   font-weight: light;
   }
   
   .shadow {
@@ -73,7 +74,7 @@
       justify-content: center;
       color: #afa18f;
       font-size: 64px;
-      line-height: 66px;
+      // line-height: 66px;
       cursor: default;
       
       p{
