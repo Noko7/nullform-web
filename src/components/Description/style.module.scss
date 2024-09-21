@@ -3,10 +3,11 @@
     padding-right: 200px;
     margin-top: 200px;
     display: flex;
-    justify-content: center;
+    
     .body{
-        max-width: 1400px;
+        max-width: 900px;
         display: flex;
+        flex-direction: column;
         gap: 50px;
         position: relative;
         p{
@@ -58,3 +59,26 @@
         border: 1px solid grey;
     }
 }
+
+
+
+.fullWidth {
+    width: 100vw;
+    text-align: center; /* Centers the character across the screen */
+  }
+
+
+  .textContainer {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  
+}
+
+
+  .buttonContainer {
+    position: relative;
+    left: 150%;
+
+  }
+
