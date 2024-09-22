@@ -41,9 +41,36 @@
  background-image: url('../../public/BgImages/WhiteNoise.jpg');
  margin-top: 0;
  padding-top: 0;
-
  background-size: cover;
  background-repeat: no-repeat;
  background-attachment: fixed;
  background-position: center;
 }
+
+
+.templateContainer {
+    background-image: url('../../public/Images/Laptop.jpg');
+    width: 100%;
+    height: 150vh;
+    z-index: 100;
+    display: flex;
+    flex-direction: row-reverse;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Ensure the image covers the container */
+    background-attachment: fixed;
+    
+}
+
+
+
+
+
+.movingTextContainer {
+height: 100%;
+    
+}
+
+
+
+

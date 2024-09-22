@@ -1,0 +1,32 @@
+.sliderContainer {
+    bottom: 0;
+    top: 0;
+
+    overflow: hidden; 
+    position: relative;
+    height: 300px; 
+    display: flex;
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    
+}
+  
+  .slider {
+    display: flex;
+    position: relative;
+    white-space: nowrap; /* Prevent line breaks for the sliding effect */
+  }
+  
+  .slider p {
+    font-size: 200px;
+    margin: 0;
+    color: #7149C5; /* Customize text color */
+    opacity: 0.8; /* Set initial opacity */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  }
+  
+  /* Add hover effects or other styles as needed */
+  .slider p:hover {
+    opacity: 1; /* Full opacity on hover */
+  }
+  

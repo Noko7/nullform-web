@@ -1,4 +1,5 @@
 "use client"
+import Smile from '../components/components/smile'
 import styles from './page.module.scss';
 import { useEffect, useState, useRef } from 'react';
 import { AnimatePresence, useScroll } from 'framer-motion';
@@ -17,6 +18,8 @@ import Lenis from 'lenis';
 import Services from '../components/services';
 import Sphere from '../components/sphere';
 import TypingEffect from '@/components/TypingEffect';
+import MovingText from '@/components/SlidingText';
+import CircleEffect from '../components/CircleEffect'
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const containerRef = useRef(null);
@@ -64,7 +67,7 @@ export default function Home() {
         <h1>NULLFORM</h1>
         {/* <TypingEffect/> */}
           <div className={styles.statueContainer}>
-            <Statue /> {/* Position statue below the BLACKGRID text */}
+            <Statue />
           </div>
         
         </div>
@@ -74,13 +77,67 @@ export default function Home() {
         <Projects />
         </div>
         <SlidingImages />
+        
+
+
+
+
+
         <div className={styles.sphereContainer}>
           <Services />
           <Sphere />
-        </div>
+        </div> 
+
+
+        <div className={styles.templateContainer}>
+       
+          <Smile/>
+          <div className={styles.copyrightText}>© nullforums</div>
         <TextSelect />
         
+        </div>
+{/* <CircleEffect/> */}
 
+
+
+
+
+
+
+
+
+<Contact/>
+
+
+
+
+
+
+
+
+
+
+{/* !END HERE BELOW IRRELEVANT :D */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+        {/* <div className={styles.movingTexContainer}>
+        <MovingText />
+        </div> */}
+{/* 
         {projects.map((project, i) => {
           const targetScale = 1 - (projects.length - i) * 0.05;
           return (
@@ -93,7 +150,7 @@ export default function Home() {
               targetScale={targetScale}
             />
           );
-        })}
+        })} */}
       </main>
     </>
   );
