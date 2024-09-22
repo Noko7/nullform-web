@@ -1,65 +1,173 @@
 .container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-// background-image: url('/public/images/background.jpg');
-background-color: black;
-  }
-  .body{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    transform-style: preserve-3d;
-    margin-top: 25px;
-    margin-left: 25px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
 
-  }
-  .textContainer {
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.4s;
-    transform-style: preserve-3d;
-  }
-  
-  .textContainer p {
-    font-size: 8vw;
-    font-weight: 700;
-    margin: 0;
-    transition: all 0.4s;
-    color: white;
-    line-height: 8vw;
-    text-shadow: 
-      10px 1px 0 #000, 
-      10px 2px 0 #000, 
-      10px 3px 0 #000, 
-      10px 4px 0 #000, 
-      10px 5px 0 #000; /* Adjust these values for the desired shadow effect */
-  }
-  
-  .textContainer .secondary {
-    transform: rotateX(-90deg) translateY(3.5vw);
-    transform-origin: bottom center;
-    position: absolute;
-    top: 0;
-    left: 0; /* Ensure correct positioning */
-    color: orange;
-    opacity: 0;
-    text-shadow: 
-      20px 1px 1px rgba(0, 0, 0, 0.6), 
-      20px 2px 1px rgba(0, 0, 0, 0.6), 
-      20px 3px 1px rgba(0, 0, 0, 0.6); /* Add depth to the shadow */
-  }
-  .textContainer:hover{
-    transform: rotateX(90deg);
-  }
-  
-  .textContainer:hover .secondary{
-    opacity: 1;
-  }
-  
-  .textContainer:hover .primary{
-    transform: translateY(-100%);
-    opacity: 0;
-  }
+.body {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform-style: preserve-3d;
+  margin-top: 25px;
+  margin-left: 25px;
+  justify-content: center;
+  align-content: center;
   
   
+}
+
+.subText {
+  position: relative;
+  top: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  p {
+      font-size: 45px;
+      color: white;
+      font-family: General;
+      font-weight: bold;
+  }
+  
+
+
+
+
+  .buttonWrapper {
+      margin-top: 20px;
+  }
+  
+  .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 30px;
+      background-color: white;
+
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+          transform: scale(1.05);
+      }
+
+      p {
+          margin: 0;
+          font-size: 23px;
+          font-weight: bold;
+          color: black;
+        padding: 10px;
+        }
+  }
+}
+
+.textContainer {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.textContainer p {
+  font-size: 5vw;
+  font-weight: 700;
+  margin: 0;
+  transition: all 0.4s;
+  text-transform: uppercase;
+  color: white;
+  line-height: 9vw;
+  text-shadow: 
+    10px 1px 0 #000, 
+    10px 2px 0 #000, 
+    10px 3px 0 #000, 
+    10px 4px 0 #000, 
+    10px 5px 0 #000;
+}
+
+.textContainer .secondary {
+  transform: rotateX(-90deg) translateY(3.5vw);
+  transform-origin: bottom center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #7149C5;
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.textContainer .secondary.animate {
+  transform: rotateX(0) translateY(0);
+  opacity: 1;
+}
+
+.textContainer:hover {
+  transform: rotateX(90deg);
+}
+
+.textContainer:hover .secondary {
+  opacity: 1;
+}
+
+.textContainer:hover .primary {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+
+
+.copyrightText {
+
+  color: orange; /* Set the text color */
+  font-family: General, sans-serif; /* Or any other font you're using */
+
+  font-size: 200px;
+  color: orange !important;
+}
+
+.templateContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Other styling */
+}
+
+.logo {
+  font-size: 30px;
+  position: absolute;
+  left: 3rem;
+  top: 0;
+  color: gray;
+  font-family: pixel;
+}
+
+
+.circleContainer{
+  background-color: red;
+  position: relative;
+  margin-top: 100px;
+  .circle{
+      height: 1550%;
+      width: 120%;
+      left: -10%;
+      border-radius: 0 0 50% 50%;
+      background-color: white;
+      z-index: 1;
+      position: absolute;
+      box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+  }
+}
+
