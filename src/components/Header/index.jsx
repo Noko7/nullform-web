@@ -38,7 +38,7 @@ export default function index() {
             <div className={styles.logo}>
                 <p className={styles.copyright}>©</p>
                 <div className={styles.name}>
-        Nullform. Design & Development Studio
+                nullform.design 2024
                 </div>
             </div>
             <div className={styles.nav}>

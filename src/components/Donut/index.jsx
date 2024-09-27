@@ -10,12 +10,12 @@ export default function Index() {
         <directionalLight intensity={2} position={[0, 2, 3]}/>
         <Environment preset='studio'/> 
         <OrbitControls
-  enableZoom={false}        // Enable zooming in and out
-  enablePan={true}         // Enable panning
-  enableRotate={true}      // Enable rotation
-  maxPolarAngle={Math.PI / 2}  // Limit vertical rotation
-  minDistance={2}          // Minimum zoom distance
-  maxDistance={5}         // Maximum zoom distance
+  enableZoom={false}       
+  enablePan={true}         
+  enableRotate={true}      
+  maxPolarAngle={Math.PI / 2}  
+  minDistance={2}         
+  maxDistance={5}         
 />
     </Canvas>
   )

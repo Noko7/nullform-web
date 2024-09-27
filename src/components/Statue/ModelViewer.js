@@ -12,7 +12,7 @@ function Model({ mouse }) {
   useFrame(({ clock }) => {
     if (modelRef.current) {
       const elapsed = clock.getElapsedTime();
-      modelRef.current.position.y = Math.sin(elapsed * 2) * 0.05 - 1; // Floating effect
+      modelRef.current.position.y = Math.sin(elapsed * 2) * 0.05 - 1;
       modelRef.current.rotation.x += (-mouse.current.y * 0.5 - modelRef.current.rotation.x) * 0.1;
       modelRef.current.rotation.y += (mouse.current.x * 0.5 - modelRef.current.rotation.y) * 0.1;
     }
@@ -22,13 +22,13 @@ function Model({ mouse }) {
     <motion.primitive
       object={scene}
       ref={modelRef}
-      scale={0.5}
-      position={[0, -5, 0]} // Start off-screen
-      initial={{ y: -5 }} // Start position
-      animate={{ y: -1 }} // Slide into view
-      transition={{ duration: 1, delay: 0.5 }} // Adjust delay and duration
-      receiveShadow // Allow receiving shadows
-      castShadow // Allow casting shadows
+      scale={0.7}
+      position={[0, -5, 0]} 
+      initial={{ y: -5 }} 
+      animate={{ y: -1 }} 
+      transition={{ duration: 1, delay: 0.5 }}
+      receiveShadow 
+      castShadow 
     />
   );
 }
@@ -71,5 +71,5 @@ export default function ModelViewer() {
   );
 }
 
-// Preload the GLTF model
+
 useGLTF.preload('./3d/statue.glb');

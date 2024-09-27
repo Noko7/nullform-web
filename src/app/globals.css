@@ -1,16 +1,20 @@
 
 body{
     margin: 0px;
-    overflow: hidden; /* Hide scrollbars */
+    overflow-x: hidden; 
     cursor: wait;
-    background-image: url('/BgImages/WhiteNoise.jpg');
-   
+    /* background-image: url('/BgImages/WhiteNoise.jpg'); */
+    background-color: #F1F0F1;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
 
+
+* {
+  overflow: hidden;
+}
 
 @font-face {
     font-family: 'Pixel';
@@ -33,4 +37,10 @@ body{
   @font-face {
     font-family: "naughty";
     src: url('/fonts/Naughty.otf');
+  }
+
+
+  @font-face {
+    font-family: 'Montreal';
+    src: url('/fonts/Montreal.otf ')
   }
