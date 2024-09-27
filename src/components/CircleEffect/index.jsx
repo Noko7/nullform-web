@@ -2,7 +2,8 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
 import Image from 'next/image';
-import TextSelect from '../TextSelect/Canvas'
+import TextSelect from '../TextSelect/Canvas';
+import Sphere from '../sphere/index'
 
 const slider1 = [
     {
@@ -58,7 +59,7 @@ export default function index() {
         <div ref={container} className={styles.slidingImages}>
 
          
-            
+{/* <Sphere/> */}
             
                 <motion.div style={{height}} className={styles.circleContainer}>
                     <div className={styles.circle}></div>

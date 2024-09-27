@@ -10,7 +10,7 @@ export default function Paragraph({ paragraph }) {
   });
 
   return (
-    <p ref={container} className={styles.paragraph}>
+    <p ref={container} className={styles.giantText}>
       {paragraph.map((item, i) => {
         const start = i / paragraph.length;
         const end = start + (1 / paragraph.length);

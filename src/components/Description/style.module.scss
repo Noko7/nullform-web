@@ -1,11 +1,10 @@
 .description{
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-top: 200px;
-    display: flex;
-    
+    padding:30px;
+    // margin-top: 200px;
+    // display: flex;
+    background-color: #F1F0F1;
     .body{
-        max-width: 900px;
+        max-width: 1400px;
         display: flex;
         flex-direction: column;
         gap: 50px;
@@ -62,10 +61,39 @@
 
 
 
-.fullWidth {
-    width: 100vw;
-    text-align: center; /* Centers the character across the screen */
-  }
+
+.headerText {
+    display: flex;
+
+
+
+
+    .downArrow {
+        width: 1em;
+        height: auto;
+        margin-left: 0.5em;
+        margin-right: 10px;
+    }
+}
+
+
+
+
+.headerText h1 {
+    font-family: Montreal;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #3B3B3A;
+
+}
+
+
+
+// .fullWidth {
+//     width: 100vw;
+//     text-align: center; /* Centers the character across the screen */
+//   }
 
 
   .textContainer {

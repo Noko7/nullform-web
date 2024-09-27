@@ -1,8 +1,8 @@
-"use client"
-import Smile from '../components/components/smile'
+"use client";
+import Smile from '../components/components/smile';
 import styles from './page.module.scss';
 import { useEffect, useState, useRef } from 'react';
-import { AnimatePresence, useScroll } from 'framer-motion';
+import { AnimatePresence, useScroll, motion } from 'framer-motion';
 import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
 import Projects from '../components/Projects';
@@ -19,9 +19,14 @@ import Services from '../components/services';
 import Sphere from '../components/sphere';
 import TypingEffect from '@/components/TypingEffect';
 import MovingText from '@/components/SlidingText';
-import CircleEffect from '../components/CircleEffect'
+import CircleEffect from '../components/CircleEffect';
+import Image from 'next/image';
+import { data } from '../components/ProjectScale/data'
+import Double from '../components/ProjectScale/index';
+import FloatingModel from '../components/FloatingShapes'
+
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -63,95 +68,55 @@ export default function Home() {
           {isLoading && <Preloader />}
         </AnimatePresence>
 
-        <div className={styles.heroContainer}>
-        <h1>NULLFORM</h1>
-        {/* <TypingEffect/> */}
-          <div className={styles.statueContainer}>
-            <Statue />
-          </div>
-        
-        </div>
+<div className={styles.heroContainer}>
+        <div className={styles.overlay}></div>
 
-<div className={styles.aboutContainer}>
-        <Description />
-        <Projects />
+        <FloatingModel className={styles.floatingModel}/>
+
+<div className={styles.content}>
+
+<h1 className={styles.heroText}>
+  <img src='/Logo.png' height='190px' style={{marginTop: '20px'}}/>
+  nullform.
+</h1>
+
+<h2 className={styles.subHeroText}>
+      Digital Consultancy <br /> + Creative Design Studio
+    </h2>
+
+</div>
+
+        </div>
+     
+
+
+        </main>
+   
+        <div className={styles.aboutContainer}>
+        <div style={{height: '0.2vh', backgroundColor: 'gray', width: '100%'}}>
+            ll
+          </div>
+          <Description />
+         
+          <div className={styles.projectScale} > 
+          <div className={styles.headerText}>
+                    <img className={styles.downArrow} src='/assets/icons/Down.svg'/>
+                    <h1>featured</h1>
+                </div>
+        <Double projects={[data[0], data[1]]}/>
+        <Double projects={[data[2], data[3]]} reversed={true}/>
+        </div>
+          <Projects />
         </div>
         <SlidingImages />
-        
-
-
-
-
 
         <div className={styles.sphereContainer}>
+    
           <Services />
           <Sphere />
         </div> 
 
 
-        <div className={styles.templateContainer}>
-       
-          <Smile/>
-          <div className={styles.copyrightText}>© nullforums</div>
-        <TextSelect />
-        
-        </div>
-{/* <CircleEffect/> */}
-
-
-
-
-
-
-
-
-
-<Contact/>
-
-
-
-
-
-
-
-
-
-
-{/* !END HERE BELOW IRRELEVANT :D */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-        {/* <div className={styles.movingTexContainer}>
-        <MovingText />
-        </div> */}
-{/* 
-        {projects.map((project, i) => {
-          const targetScale = 1 - (projects.length - i) * 0.05;
-          return (
-            <CardStack
-              key={`p_${i}`}
-              i={i}
-              {...project}
-              progress={scrollYProgress}
-              range={[i * 0.25, 1]}
-              targetScale={targetScale}
-            />
-          );
-        })} */}
-      </main>
     </>
   );
 }

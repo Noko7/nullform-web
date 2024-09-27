@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from './styles.module.scss'; // Adjust the path as needed
+import styles from './styles.module.scss'; 
 
 const TypingEffect = () => {
   const fullText = "BLACKGRID.";
@@ -15,18 +15,18 @@ const TypingEffect = () => {
         setDisplayedText((prev) => prev + fullText[index]);
         index++;
       } else {
-        clearInterval(typingInterval); // Clear the interval using the ID
+        clearInterval(typingInterval); 
         setIsBlinking(true); 
       }
-    }, 200); // Typing speed (milliseconds)
+    }, 200); 
 
-    return () => clearInterval(typingInterval); // Cleanup function
+    return () => clearInterval(typingInterval); 
   }, []);
 
   return (
     <h1 className={styles.typingEffect}>
       {displayedText}
-      <span className={isBlinking ? styles.blink : ''}>.</span> {/* Blinking period */}
+      <span className={isBlinking ? styles.blink : ''}>.</span> 
     </h1>
   );
 };

@@ -9,7 +9,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function Index() {
     const content = [
-        { text: "We are a", isHighlighted: false },
+        { text: "We are a", isHighlighted: false, indent:true },
         { text: " guerilla force", isHighlighted: true },
         { text: " in the world of", isHighlighted: false },
         { text: " identity and design", isHighlighted: true },
@@ -27,7 +27,15 @@ export default function Index() {
     return (
         <div ref={description} className={styles.description}>
             <div className={styles.body}>
-                
+
+
+                <div className={styles.headerText}>
+                    <img className={styles.downArrow} src='/assets/icons/Down.svg'/>
+                    <h1>Who we are</h1>
+                </div>
+
+
+
                 {/* Mouse position mask animation for Character */}
                 <ScrollAnimation animateIn="fadeInUp" duration={1}>
                     <motion.div
@@ -60,9 +68,6 @@ export default function Index() {
                         </Rounded>
                     </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
