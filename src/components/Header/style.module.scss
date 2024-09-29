@@ -59,6 +59,16 @@
     .nav{
         display: flex;
         align-items: center;
+    line-height: 10px;
+
+        @media screen and (max-width: 900px) {
+            
+                flex-direction: column;
+            
+        }
+
+
+
 
         .el{
             font: url('/fonts/Aeonik.ttf');

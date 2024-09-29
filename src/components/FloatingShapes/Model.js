@@ -31,6 +31,8 @@ export default function Model({mouse}) {
       <Mesh node={nodes.Cylinder007} multiplier={1.6} mouse={mouse} isActive={activeShape == 9}/>
       <Mesh node={nodes.Cylinder009} multiplier={1.8} mouse={mouse} isActive={activeShape == 10}/>
       <Mesh node={nodes.Sphere} multiplier={1.5} mouse={mouse} isActive={activeShape == 11}/>
+      <Mesh node={nodes.Sphere} multiplier={10.5} mouse={mouse} isActive={activeShape == 11}/>
+      <Mesh node={nodes.Sphere001} multiplier={9.4} mouse={mouse} isActive={activeShape == 1}/>
     </group>
   );
 }
@@ -64,7 +66,7 @@ function Mesh({node, multiplier, mouse, isActive}) {
         position-x={positionX}
         position-y={positionY}
         animate={{rotateZ: isActive ? rotation.z + getRandomMultiplier() : null}}
-        transition={{type: "spring", stiffness: 75, damping: 100, mass: 3}}
+        transition={{type: "spring", stiffness: 100, damping: 50, mass: 10}}
       />
     </Float>
   )

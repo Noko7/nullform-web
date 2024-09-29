@@ -5,7 +5,7 @@ import Header from '../components/Header';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'nullform. Web Design & Development',
+  title: 'nullform.design - Creative Design',
   description: 'We are a guerilla force in the world of identity and design. We work at the intersection of design and technology to deliver unique digital experiences like no other',
 }
 

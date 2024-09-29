@@ -8,6 +8,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
+import Clock from 'react-live-clock';
 
 export default function index() {
     const header = useRef(null);
@@ -36,9 +37,9 @@ export default function index() {
         <>
         <div ref={header} className={styles.header}>
             <div className={styles.logo}>
-                <p className={styles.copyright}>©</p>
+                <p className={styles.copyright}>GMT </p>
                 <div className={styles.name}>
-                nullform.design 2024
+                <Clock format={'HH:mm:ss'} ticking={true} timezone={'US/Pacific'} />
                 </div>
             </div>
             <div className={styles.nav}>
