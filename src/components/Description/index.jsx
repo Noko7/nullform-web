@@ -5,7 +5,7 @@ import { slideUp, opacity } from './animation';
 import Character from '../Paragraph/Word';
 import { FaArrowRight } from "react-icons/fa";
 import Rounded from '../../common/RoundedButton';
-export default function index() {
+export default function Index() {
 
 
 

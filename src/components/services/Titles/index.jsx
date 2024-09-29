@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import styles from './styles.module.scss';
 import { useScroll, motion, useTransform, useMotionTemplate } from 'framer-motion';
 import ScrollAnimation from 'react-animate-on-scroll';
-export default function index({data, setSelectedProject}) {
+export default function Index({data, setSelectedProject}) {
   return (
     <div className={styles.titles}>
         {

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.scss';
 
-export default function index({data, selectedProject}) {
+export default function Index({data, selectedProject}) {
 
     const crop = (string, maxLength) => {
         return string.substring(0, maxLength);
