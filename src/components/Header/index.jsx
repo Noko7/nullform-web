@@ -6,11 +6,11 @@ import { AnimatePresence } from 'framer-motion';
 import Nav from './nav';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Rounded from '../../common/RoundedButton';
-import Magnetic from '../../common/Magnetic';
+import Rounded from '../../common/RoundedButton/Index';
+import Magnetic from '../../common/Magnetic/Index';
 import Clock from 'react-live-clock';
 
-export default function index() {
+export default function Index() {
     const header = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const pathname = usePathname();
