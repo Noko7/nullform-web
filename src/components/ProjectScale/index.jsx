@@ -46,8 +46,6 @@ export default function Index({projects, reversed}) {
       <>
           
       <div onMouseMove={(e) => {manageMouseMove(e)}} className={styles.double}>
-        
-  
         <div ref={firstImage} className={styles.imageContainer}>
           <div className={styles.stretchyWrapper}>
             <Image 

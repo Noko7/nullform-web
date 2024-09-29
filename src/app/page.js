@@ -24,9 +24,11 @@ import Image from 'next/image';
 import { data } from '../components/ProjectScale/data'
 import Double from '../components/ProjectScale/index';
 import FloatingModel from '../components/FloatingShapes'
+ import Character from '../components/TextAppearChar/Character';
+ 
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -61,6 +63,10 @@ export default function Home() {
     ssr: false,
   });
 
+
+  const paragraph = "We are aguerilla force guerilla forcein the world of in the world ofidentity and design identity and designwe work at the intersection of we work at the intersection ofdesign and technology to deliver unique digital experiences like no other design and technology to deliver unique digital experiences like no other"
+
+
   return (
     <>
       <main className={styles.main} ref={containerRef}>
@@ -74,9 +80,8 @@ export default function Home() {
         <FloatingModel className={styles.floatingModel}/>
 
 <div className={styles.content}>
-
 <h1 className={styles.heroText}>
-  <img src='/Logo.png' height='190px' style={{marginTop: '20px'}}/>
+  <img src='/Logo.png'  className={styles.heroLogo}/>
   nullform.
 </h1>
 
@@ -87,34 +92,35 @@ export default function Home() {
 </div>
 
         </div>
-     
-
-
+        <Description />
         </main>
    
-        <div className={styles.aboutContainer}>
-        <div style={{height: '0.2vh', backgroundColor: 'gray', width: '100%'}}>
-            ll
-          </div>
-          <Description />
+
+
+          
          
-          <div className={styles.projectScale} > 
+          {/* <div className={styles.projectScale} > 
           <div className={styles.headerText}>
                     <img className={styles.downArrow} src='/assets/icons/Down.svg'/>
                     <h1>featured</h1>
                 </div>
         <Double projects={[data[0], data[1]]}/>
         <Double projects={[data[2], data[3]]} reversed={true}/>
-        </div>
+        </div> */}
           <Projects />
-        </div>
+          {/* <Double projects={[data[0], data[1]]}/>
+          <Double projects={[data[2], data[3]]} reversed={true}/> */}
+   
         <SlidingImages />
 
-        <div className={styles.sphereContainer}>
+         {/* <div className={styles.sphereContainer}>
     
           <Services />
           <Sphere />
-        </div> 
+        </div>   */}
+
+<Contact/>
+
 
 
     </>
