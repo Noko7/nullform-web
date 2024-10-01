@@ -3,11 +3,11 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence } from 'framer-motion';
-import Nav from './nav';
+import Nav from './nav/Index';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Rounded from '../../common/RoundedButton/Index';
-import Magnetic from '../../common/Magnetic/Index';
+import Rounded from '../../common/RoundedButton';
+import Magnetic from '../../common/Magnetic';
 import Clock from 'react-live-clock';
 
 export default function Index() {

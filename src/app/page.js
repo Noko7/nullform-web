@@ -7,7 +7,7 @@ import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
 import Projects from '../components/Projects';
 import Description from '../components/Description';
-import SlidingImages from '../components/SlidingImages';
+import SlidingImages from '../components/SlidingImages/Index';
 import Contact from '../components/Contact';
 import Statue from '../components/Statue';
 import dynamic from 'next/dynamic';

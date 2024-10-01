@@ -2,7 +2,7 @@ import styles from './styles.module.scss'
 import Text3d from './index'
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import Rounded from '../../common/RoundedButton/Index'
+import Rounded from '../../common/RoundedButton'
 
 export default function Canvas() {
 
