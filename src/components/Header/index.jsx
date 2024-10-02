@@ -7,7 +7,7 @@ import Nav from './nav';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
-import Magnetic from '../../common/Magnetic';
+import Magnetic from '../../common/Magnetic/index';
 import Clock from 'react-live-clock';
 
 export default function Index() {
