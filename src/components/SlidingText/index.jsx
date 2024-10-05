@@ -1,7 +1,8 @@
+'use client';
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
 export default function MovingText() {
   const firstText = useRef(null);
@@ -11,18 +12,20 @@ export default function MovingText() {
   let direction = -1;
 
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.25,
-        start: 0,
-        end: window.innerHeight,
-        onUpdate: e => direction = e.direction * -1
-      },
-      x: "-500px",
-    });
-    requestAnimationFrame(animate);
+    if (typeof window !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(slider.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: 0.25,
+          start: 0,
+          end: window.innerHeight,
+          onUpdate: (e) => (direction = e.direction * -1),
+        },
+        x: '-500px',
+      });
+      requestAnimationFrame(animate);
+    }
   }, []);
 
   const animate = () => {
@@ -35,7 +38,7 @@ export default function MovingText() {
     gsap.set(secondText.current, { xPercent: xPercent });
     requestAnimationFrame(animate);
     xPercent += 0.1 * direction;
-  }
+  };
 
   return (
     <div className={styles.sliderContainer}>

@@ -27,6 +27,7 @@ import Double from '../components/ProjectScale/index';
 import FloatingModel from '../components/FloatingShapes'
  import Character from '../components/TextAppearChar/Character';
  
+ 
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,15 +39,15 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
+    if (typeof window !== 'undefined') {
+      const lenis = new Lenis();
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
       requestAnimationFrame(raf);
     }
-
-    requestAnimationFrame(raf);
   }, []);
-
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;

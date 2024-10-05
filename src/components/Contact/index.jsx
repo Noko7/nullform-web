@@ -1,9 +1,9 @@
 import styles from './style.module.scss';
 import Image from 'next/image';
-import Rounded from '../../common/RoundedButton/index';
+import Rounded from '../../common/RoundedButton/index.jsx';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
-import Magnetic from '../../common/Magnetic/index';
+import Magnetic from '../../common/Magnetic/index.jsx';
 
 export default function Index() {
     const container = useRef(null);
@@ -26,7 +26,7 @@ export default function Index() {
                             src={`/Logo.png`}
                             />
                         </div>
-                        <h2>Let's work</h2>
+                        <h2>Let&apos;s work</h2>
                     </span>
                     <h2>together</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>

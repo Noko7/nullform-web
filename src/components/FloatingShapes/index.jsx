@@ -8,7 +8,7 @@ import * as THREE from 'three';
 
 export default function Index() {
   
-  const pngTexture = useLoader(THREE.TextureLoader, '/purple.png'); // Update with the correct path to your PNG file
+  const pngTexture = useLoader(THREE.TextureLoader, '/purple.png');
 
   const mouse = {
     x: useMotionValue(0),
@@ -20,7 +20,7 @@ export default function Index() {
     y: useSpring(mouse.y, { stiffness: 75, damping: 100, mass: 10 }),
   };
 
-  // Mouse movement handler
+
   const manageMouse = (e) => {
     const { innerWidth, innerHeight } = window;
     const { clientX, clientY } = e;
@@ -31,8 +31,10 @@ export default function Index() {
   };
 
   useEffect(() => {
+    if (window !== 'undefined') { 
     window.addEventListener('mousemove', manageMouse);
     return () => window.removeEventListener('mousemove', manageMouse);
+  }
   }, []);
 
   return (
