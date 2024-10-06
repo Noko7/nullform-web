@@ -94,7 +94,7 @@ export default function Home() {
 </div>
 
         </div>
-        <Description />
+        {/* <Description /> */}
         </main>
    
 
@@ -109,7 +109,7 @@ export default function Home() {
         <Double projects={[data[0], data[1]]}/>
         <Double projects={[data[2], data[3]]} reversed={true}/>
         </div> */}
-          <Projects />
+          {/* <Projects /> */}
           {/* <Double projects={[data[0], data[1]]}/>
           <Double projects={[data[2], data[3]]} reversed={true}/> */}
    
@@ -121,7 +121,7 @@ export default function Home() {
           <Sphere />
         </div>   */}
 
-<Contact/>
+{/* <Contact/> */}
 
 
 
