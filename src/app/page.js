@@ -8,7 +8,7 @@ import Landing from '../components/Landing';
 import Projects from '../components/Projects';
 import Description from '../components/Description';
 // import SlidingImages from '../components/SlidingImages';
-import SlidingImages from '../components/SlidingImages/Index';
+// import SlidingImages from '../components/SlidingImages/Index';
 import Contact from '../components/Contact';
 import Statue from '../components/Statue';
 import dynamic from 'next/dynamic';
@@ -113,7 +113,7 @@ export default function Home() {
           {/* <Double projects={[data[0], data[1]]}/>
           <Double projects={[data[2], data[3]]} reversed={true}/> */}
    
-        <SlidingImages />
+        {/* <SlidingImages /> */}
 
          {/* <div className={styles.sphereContainer}>
     
