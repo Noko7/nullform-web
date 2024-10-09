@@ -10,7 +10,6 @@ import Lenis from 'lenis';
 import Image from 'next/image';
 import { data } from '../components/ProjectScale/data';
 
-// Dynamically import components with SSR disabled
 const FloatingModel = dynamic(() => import('../components/FloatingShapes'), { ssr: false });
 const Description = dynamic(() => import('../components/Description'), { ssr: false });
 const Projects = dynamic(() => import('../components/Projects'), { ssr: false });
